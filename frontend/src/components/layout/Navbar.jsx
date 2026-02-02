@@ -14,13 +14,13 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-dark-bg/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-primary/20 dark:border-primary/20">
+    <nav className={`sticky top-0 z-50 backdrop-blur-md border-b transition-colors duration-300 ${isDark ? 'bg-dark-bg/80 border-primary/20' : 'bg-light-bg/80 border-dark-bg/20'}`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-            <span className="text-primary font-orbitron font-bold text-xl tracking-wider">
+            <div className={`w-2 h-2 rounded-full animate-pulse ${isDark ? 'bg-primary' : 'bg-dark-bg'}`}></div>
+            <span className={`font-orbitron font-bold text-xl tracking-wider ${isDark ? 'text-primary' : 'text-dark-bg'}`}>
               CM.DEV
             </span>
           </div>
@@ -29,31 +29,31 @@ export const Navbar = () => {
           <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection('about')}
-              className="text-base dark:text-[#E5E7EB] hover:text-primary transition-colors font-inter text-sm uppercase tracking-wide hover:underline hover:underline-offset-4"
+              className={`hover:transition-colors font-inter text-sm uppercase tracking-wide hover:underline hover:underline-offset-4 ${isDark ? 'text-[#E5E7EB] hover:text-primary' : 'text-dark-bg/70 hover:text-dark-bg'}`}
             >
               {t('nav.about')}
             </button>
             <button
               onClick={() => scrollToSection('skills')}
-              className="text-base dark:text-[#E5E7EB] hover:text-primary transition-colors font-inter text-sm uppercase tracking-wide hover:underline hover:underline-offset-4"
+              className={`hover:transition-colors font-inter text-sm uppercase tracking-wide hover:underline hover:underline-offset-4 ${isDark ? 'text-[#E5E7EB] hover:text-primary' : 'text-dark-bg/70 hover:text-dark-bg'}`}
             >
               {t('nav.skills')}
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className="text-base dark:text-[#E5E7EB] hover:text-primary transition-colors font-inter text-sm uppercase tracking-wide hover:underline hover:underline-offset-4"
+              className={`hover:transition-colors font-inter text-sm uppercase tracking-wide hover:underline hover:underline-offset-4 ${isDark ? 'text-[#E5E7EB] hover:text-primary' : 'text-dark-bg/70 hover:text-dark-bg'}`}
             >
               {t('nav.projects')}
             </button>
             <button
               onClick={() => scrollToSection('experience')}
-              className="text-base dark:text-[#E5E7EB] hover:text-primary transition-colors font-inter text-sm uppercase tracking-wide hover:underline hover:underline-offset-4"
+              className={`hover:transition-colors font-inter text-sm uppercase tracking-wide hover:underline hover:underline-offset-4 ${isDark ? 'text-[#E5E7EB] hover:text-primary' : 'text-dark-bg/70 hover:text-dark-bg'}`}
             >
               {t('nav.experience')}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-base dark:text-[#E5E7EB] hover:text-primary transition-colors font-inter text-sm uppercase tracking-wide hover:underline hover:underline-offset-4"
+              className={`hover:transition-colors font-inter text-sm uppercase tracking-wide hover:underline hover:underline-offset-4 ${isDark ? 'text-[#E5E7EB] hover:text-primary' : 'text-dark-bg/70 hover:text-dark-bg'}`}
             >
               {t('nav.contact')}
             </button>
@@ -64,7 +64,7 @@ export const Navbar = () => {
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-dark-card/50 dark:bg-dark-card/50 border border-primary/20 dark:border-primary/20 hover:border-primary/60 dark:hover:border-primary/60 transition-all"
+              className={`p-2 rounded-lg border transition-all ${isDark ? 'bg-dark-card/50 border-primary/20 hover:border-primary/60' : 'bg-light-card/50 border-dark-bg/20 hover:border-dark-bg/60'}`}
               title={isDark ? 'Light Mode' : 'Dark Mode'}
             >
               {isDark ? (
@@ -72,7 +72,7 @@ export const Navbar = () => {
                   <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                 </svg>
               ) : (
-                <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                <svg className={`w-5 h-5 ${isDark ? 'text-primary' : 'text-dark-bg'}`} fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.536l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.828-2.828a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm2.828 2.828a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm-4.536 4.536a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707z" clipRule="evenodd"></path>
                 </svg>
               )}
@@ -81,7 +81,7 @@ export const Navbar = () => {
             {/* Language Toggle */}
             <button
               onClick={toggleLanguage}
-              className="p-2 rounded-lg bg-dark-card/50 dark:bg-dark-card/50 border border-primary/20 dark:border-primary/20 hover:border-primary/60 dark:hover:border-primary/60 transition-all font-inter text-sm font-bold uppercase text-primary"
+              className={`p-2 rounded-lg border transition-all font-inter text-sm font-bold uppercase ${isDark ? 'bg-dark-card/50 border-primary/20 hover:border-primary/60 text-primary' : 'bg-light-card/50 border-dark-bg/20 hover:border-dark-bg/60 text-dark-bg'}`}
             >
               {language === 'es' ? 'EN' : 'ES'}
             </button>
@@ -89,9 +89,9 @@ export const Navbar = () => {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg bg-dark-card/50 dark:bg-dark-card/50 border border-primary/20 dark:border-primary/20"
+              className={`md:hidden p-2 rounded-lg border transition-all ${isDark ? 'bg-dark-card/50 border-primary/20' : 'bg-light-card/50 border-dark-bg/20'}`}
             >
-              <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className={`w-5 h-5 ${isDark ? 'text-primary' : 'text-dark-bg'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMobileMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -104,34 +104,34 @@ export const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 flex flex-col gap-4 border-t border-primary/20 dark:border-primary/20 pt-4">
+          <div className={`md:hidden mt-4 flex flex-col gap-4 border-t transition-colors duration-300 pt-4 ${isDark ? 'border-primary/20' : 'border-dark-bg/20'}`}>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-base dark:text-[#E5E7EB] hover:text-primary transition-colors font-inter text-sm uppercase tracking-wide"
+              className={`font-inter text-sm uppercase tracking-wide ${isDark ? 'text-[#E5E7EB] hover:text-primary' : 'text-dark-bg/70 hover:text-dark-bg'}`}
             >
               {t('nav.about')}
             </button>
             <button
               onClick={() => scrollToSection('skills')}
-              className="text-base dark:text-[#E5E7EB] hover:text-primary transition-colors font-inter text-sm uppercase tracking-wide"
+              className={`font-inter text-sm uppercase tracking-wide ${isDark ? 'text-[#E5E7EB] hover:text-primary' : 'text-dark-bg/70 hover:text-dark-bg'}`}
             >
               {t('nav.skills')}
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className="text-base dark:text-[#E5E7EB] hover:text-primary transition-colors font-inter text-sm uppercase tracking-wide"
+              className={`font-inter text-sm uppercase tracking-wide ${isDark ? 'text-[#E5E7EB] hover:text-primary' : 'text-dark-bg/70 hover:text-dark-bg'}`}
             >
               {t('nav.projects')}
             </button>
             <button
               onClick={() => scrollToSection('experience')}
-              className="text-base dark:text-[#E5E7EB] hover:text-primary transition-colors font-inter text-sm uppercase tracking-wide"
+              className={`font-inter text-sm uppercase tracking-wide ${isDark ? 'text-[#E5E7EB] hover:text-primary' : 'text-dark-bg/70 hover:text-dark-bg'}`}
             >
               {t('nav.experience')}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-base dark:text-[#E5E7EB] hover:text-primary transition-colors font-inter text-sm uppercase tracking-wide"
+              className={`font-inter text-sm uppercase tracking-wide ${isDark ? 'text-[#E5E7EB] hover:text-primary' : 'text-dark-bg/70 hover:text-dark-bg'}`}
             >
               {t('nav.contact')}
             </button>

@@ -32,8 +32,12 @@ export const Hero = () => {
           {/* Left Column - Text */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-              <span className="font-orbitron text-sm uppercase tracking-wider text-primary">
+              <div className={`w-2 h-2 rounded-full animate-pulse ${
+                isDark ? 'bg-primary' : 'bg-dark-bg'
+              }`}></div>
+              <span className={`font-orbitron text-sm uppercase tracking-wider ${
+                isDark ? 'text-primary' : 'text-dark-bg'
+              }`}>
                 {t('hero.status')}
               </span>
             </div>
@@ -42,7 +46,7 @@ export const Hero = () => {
               isDark ? 'text-primary drop-shadow-[0_0_10px_rgba(125,249,255,0.4)]' : 'text-dark-bg'
             }`}>
               {t('hero.greeting')} <br />
-              <span className="text-primary">{t('hero.name')}</span>
+              <span className={isDark ? 'text-primary' : 'text-dark-bg'}>{t('hero.name')}</span>
             </h1>
 
             <p className={`text-2xl lg:text-3xl font-inter font-semibold ${
@@ -77,22 +81,28 @@ export const Hero = () => {
 
             {/* Quick Stats */}
             <div className={`flex gap-8 pt-8 border-t ${
-              isDark ? 'border-primary/20' : 'border-gray-200'
+              isDark ? 'border-primary/20' : 'border-dark-bg/20'
             }`}>
               <div>
-                <p className="font-orbitron text-2xl font-bold text-primary">1+</p>
+                <p className={`font-orbitron text-2xl font-bold ${
+                  isDark ? 'text-primary' : 'text-dark-bg'
+                }`}>1+</p>
                 <p className={`text-sm font-inter ${
                   isDark ? 'text-[#94A3B8]' : 'text-[#334155]'
                 }`}>Años de experiencia</p>
               </div>
               <div>
-                <p className="font-orbitron text-2xl font-bold text-primary">3+</p>
+                <p className={`font-orbitron text-2xl font-bold ${
+                  isDark ? 'text-primary' : 'text-dark-bg'
+                }`}>3+</p>
                 <p className={`text-sm font-inter ${
                   isDark ? 'text-[#94A3B8]' : 'text-[#334155]'
                 }`}>Proyectos completados</p>
               </div>
               <div>
-                <p className="font-orbitron text-2xl font-bold text-primary">100%</p>
+                <p className={`font-orbitron text-2xl font-bold ${
+                  isDark ? 'text-primary' : 'text-dark-bg'
+                }`}>100%</p>
                 <p className={`text-sm font-inter ${
                   isDark ? 'text-[#94A3B8]' : 'text-[#334155]'
                 }`}>Dedicación</p>
@@ -107,14 +117,14 @@ export const Hero = () => {
               <div className={`absolute inset-0 rounded-lg blur-3xl opacity-30 ${
                 isDark 
                   ? 'bg-primary' 
-                  : 'bg-primary/30'
+                  : 'bg-dark-bg'
               }`}></div>
 
               {/* Avatar Box */}
               <div className={`absolute inset-0 border-2 rounded-lg flex items-center justify-center overflow-hidden ${
                 isDark
                   ? 'bg-dark-card border-primary/50'
-                  : 'bg-light-card border-primary/30'
+                  : 'bg-light-card border-dark-bg/30'
               }`}>
                 {/* Profile Image */}
                 <img 
@@ -126,15 +136,17 @@ export const Hero = () => {
 
               {/* Decorative Elements */}
               <div className={`absolute -top-2 -right-2 w-8 h-8 border-2 rounded ${
-                isDark ? 'border-primary' : 'border-primary/60'
+                isDark ? 'border-primary' : 'border-dark-bg'
               }`}></div>
               <div className={`absolute -bottom-2 -left-2 w-8 h-8 border-2 rounded ${
-                isDark ? 'border-primary' : 'border-primary/60'
+                isDark ? 'border-primary' : 'border-dark-bg'
               }`}></div>
 
               {/* Username */}
               <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 text-center">
-                <p className="font-orbitron text-xl font-bold text-primary">ZilonZ</p>
+                <p className={`font-orbitron text-xl font-bold ${
+                  isDark ? 'text-primary' : 'text-dark-bg'
+                }`}>ZilonZ</p>
               </div>
             </div>
           </div>

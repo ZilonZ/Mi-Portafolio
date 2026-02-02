@@ -11,7 +11,9 @@ export const SectionTitle = ({ title, subtitle, className = '' }) => {
         {title}
       </h2>
       <div className="flex items-center gap-3">
-        <div className="w-1 h-8 rounded-full bg-primary"></div>
+        <div className={`w-1 h-8 rounded-full ${
+          isDark ? 'bg-primary' : 'bg-dark-bg'
+        }`}></div>
         <p className={`font-inter text-lg font-medium ${
           isDark ? 'text-primary' : 'text-dark-bg'
         }`}>

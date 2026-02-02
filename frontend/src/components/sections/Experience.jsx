@@ -35,12 +35,12 @@ export const Experience = () => {
                     {/* Dot */}
                     <div className={`absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-2 shadow-glow hidden md:block ${
                       isDark
-                        ? 'bg-cyber-neon border-cyber-dark'
-                        : 'bg-cyber-blue-600 border-light-bg'
+                        ? 'bg-primary border-dark-bg'
+                        : 'bg-dark-bg border-light-bg'
                     }`}></div>
                     
                     <p className={`font-orbitron text-lg uppercase tracking-wider ${
-                      isDark ? 'text-cyber-neon' : 'text-cyber-blue-600'
+                      isDark ? 'text-primary' : 'text-dark-bg'
                     }`}>
                       {exp.year}
                     </p>
@@ -49,23 +49,23 @@ export const Experience = () => {
 
                 {/* Content */}
                 <div className={`${idx % 2 === 0 ? 'md:col-start-1 md:text-right' : 'md:col-start-2'}`}>
-                  <div className={`p-6 rounded-xl transition-all ${
+                  <div className={`p-6 rounded-xl transition-all duration-300 hover:scale-105 ${
                     isDark
-                      ? 'bg-cyber-black/50 border border-cyber-blue-600/30 hover:border-cyber-blue-600/60 hover:shadow-glow'
-                      : 'bg-white border border-light-border hover:border-cyber-blue-400 hover:shadow-lg'
+                      ? 'bg-cyber-black/50 border border-cyber-blue-600/30 hover:border-primary/60 hover:shadow-[0_0_20px_rgba(125,249,255,0.3)]'
+                      : 'bg-white border border-dark-bg/20 hover:border-dark-bg/40 hover:shadow-lg'
                   }`}>
                     <h3 className={`font-orbitron text-lg uppercase tracking-wider mb-1 ${
-                      isDark ? 'text-cyber-bright' : 'text-cyber-blue-600'
+                      isDark ? 'text-primary' : 'text-dark-bg'
                     }`}>
                       {exp.title}
                     </h3>
                     <p className={`font-inter text-sm mb-3 ${
-                      isDark ? 'text-cyber-blue-600' : 'text-cyber-blue-500'
+                      isDark ? 'text-[#94A3B8]' : 'text-[#334155]'
                     }`}>
                       {exp.company}
                     </p>
                     <p className={`font-inter text-sm leading-relaxed ${
-                      isDark ? 'text-cyber-light/70' : 'text-light-text/70'
+                      isDark ? 'text-[#E5E7EB]/70' : 'text-dark-bg/70'
                     }`}>
                       {exp.description}
                     </p>
