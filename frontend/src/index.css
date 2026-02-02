@@ -1,12 +1,16 @@
+/* Importa Tailwind CSS v4 como módulo postcss */
 @import "tailwindcss";
+/* Importa fuentes de Google Fonts: Orbitron, Inter, Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* Estilos base que aplican a todo el documento */
 @layer base {
   :root {
     color-scheme: light;
   }
 
   html {
+    /* Scroll suave al hacer scroll */
     scroll-behavior: smooth;
   }
 
@@ -14,24 +18,26 @@
     color-scheme: dark;
   }
 
-  /* Dark Mode Base Styles */
+  /* Estilos base para dark mode */
   html.dark body {
     background-color: #020617;
     color: #E5E7EB;
   }
 
+  /* Encabezados en dark mode con color cyan */
   html.dark h1,
   html.dark h2,
   html.dark h3 {
     color: #7DF9FF;
   }
 
-  /* Light Mode Base Styles */
+  /* Estilos base para light mode */
   html:not(.dark) body {
     background-color: #F8FAFC;
     color: #020617;
   }
 
+  /* Encabezados en light mode con color oscuro */
   html:not(.dark) h1,
   html:not(.dark) h2,
   html:not(.dark) h3 {
@@ -39,6 +45,7 @@
   }
 }
 
+/* Utilidades CSS personalizadas */
 @layer components {
   /* Tokens semánticos para dark mode */
   .dark .text-base {
@@ -58,7 +65,7 @@
     @apply text-[#334155];
   }
 
-  /* Siempre light mode para texto sin contexto */
+  /* Fallback para texto sin contexto de modo */
   .text-base {
     @apply text-[#020617];
   }
@@ -67,12 +74,12 @@
     @apply text-[#334155];
   }
 
-  /* Color primario */
+  /* Utilidad para texto primario (cyan neon) */
   .text-primary {
     @apply text-[#7DF9FF];
   }
 
-  /* Glow effects */
+  /* Efectos de glow (brillo neon) */
   .glow-primary {
     @apply text-[#7DF9FF] drop-shadow-[0_0_10px_rgba(125,249,255,0.4)];
   }
@@ -81,7 +88,7 @@
     @apply text-[#7DF9FF] drop-shadow-[0_0_20px_rgba(125,249,255,0.6)];
   }
 
-  /* Border primary */
+  /* Borde con color primario */
   .border-primary {
     @apply border-[#7DF9FF];
   }
@@ -90,7 +97,7 @@
     @apply border-[#7DF9FF]/30;
   }
 
-  /* Backgrounds */
+  /* Fondos personalizados */
   .bg-primary {
     @apply bg-[#7DF9FF];
   }
@@ -103,7 +110,7 @@
     @apply bg-[#FFFFFF];
   }
 
-  /* Links con mejor accesibilidad */
+  /* Enlaces con mejor accesibilidad y transiciones */
   .dark a:not(.no-hover) {
     @apply text-[#7DF9FF] hover:text-[#7DF9FF] hover:underline;
   }
@@ -112,7 +119,7 @@
     @apply text-[#7DF9FF] hover:underline;
   }
 
-  /* Card styling */
+  /* Estilos de tarjeta (card) personalizados */
   .dark .card {
     @apply bg-[#050B14] border border-[#7DF9FF]/20 rounded-xl p-6;
   }
@@ -122,27 +129,30 @@
   }
 }
 
+/* Estilos globales del cuerpo */
 body {
   font-family: 'Inter', sans-serif;
+  /* Transición suave de colores al cambiar tema */
   transition: background-color 300ms, color 300ms;
 }
 
-/* Typography */
+/* Tipografía: encabezados con fuente Orbitron */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Orbitron', sans-serif;
   font-weight: 700;
 }
 
+/* Enlaces con transición de color suave */
 a {
   transition: color 300ms;
 }
 
-/* Borders - adaptar según tema */
+/* Colores de bordes: adaptarse según tema */
 html:not(.dark) * {
   border-color: #E5E7EB;
 }
 
-/* Global Animations */
+/* Animaciones globales */
 @keyframes slide-in-down {
   from {
     transform: translateY(-10px);
@@ -158,7 +168,7 @@ html:not(.dark) * {
   animation: slide-in-down 0.5s ease-out;
 }
 
-/* Loading Animation */
+/* Animación de carga: spinner */
 .loading {
   position: relative;
   display: inline-block;
@@ -185,7 +195,7 @@ html:not(.dark) * {
   }
 }
 
-/* Float Animation */
+/* Animación de flotación: movimiento vertical suave */
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);

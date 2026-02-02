@@ -1,3 +1,6 @@
+// Array de datos de proyectos completados y destacados
+// NOTA: Esta es una copia de respaldo. Los datos principales se encuentran en src/i18n/es.json
+// Los componentes usan la versión de i18n con la función t('projects.projects')
 export const projectsData = [
   {
     id: 1,

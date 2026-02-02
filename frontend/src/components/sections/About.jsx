@@ -3,6 +3,8 @@ import { useTheme } from '../../hooks/useTheme';
 import { Card } from '../ui/Card';
 import { SectionTitle } from '../ui/SectionTitle';
 
+// Sección "Acerca de mí"
+// Muestra foto, descripción personal, estadísticas y especialidades
 export const About = () => {
   const { t } = useLanguage();
   const { isDark } = useTheme();
@@ -12,13 +14,15 @@ export const About = () => {
       isDark ? 'bg-cyber-darker' : 'bg-light-bg'
     }`}>
       <div className="max-w-7xl mx-auto px-6">
+        {/* Encabezado de sección */}
         <SectionTitle
           title={t('about.title')}
           subtitle={t('about.subtitle')}
         />
 
+        {/* Grid de dos columnas: imagen a la izquierda, contenido a la derecha */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left - Image/Avatar */}
+          {/* Columna izquierda: Foto/Avatar */}
           <div className="flex justify-center">
             <Card className="w-80 h-96 flex items-center justify-center overflow-hidden hover:scale-105">
               <img 
@@ -29,18 +33,20 @@ export const About = () => {
             </Card>
           </div>
 
-          {/* Right - Content */}
+          {/* Columna derecha: Contenido, estadísticas y especialidades */}
           <div className="space-y-6">
+            {/* Descripción personal */}
             <p className={`font-inter text-lg leading-relaxed ${
               isDark ? 'text-cyber-light/80' : 'text-light-text/80'
             }`}>
               {t('about.description')}
             </p>
 
-            {/* Stats Grid */}
+            {/* Grid de estadísticas: nivel, experiencia, enfoque */}
             <div className={`grid grid-cols-3 gap-4 py-6 border-t border-b ${
               isDark ? 'border-cyber-blue-600/30' : 'border-light-border'
             }`}>
+              {/* Nivel/Proficiency */}
               <div>
                 <p className={`font-orbitron text-3xl font-bold ${
                   isDark ? 'text-cyber-neon' : 'text-cyber-blue-600'
@@ -53,6 +59,7 @@ export const About = () => {
                   {t('about.levelLabel')}
                 </p>
               </div>
+              {/* Años de experiencia */}
               <div>
                 <p className={`font-orbitron text-3xl font-bold ${
                   isDark ? 'text-cyber-neon' : 'text-cyber-blue-600'
@@ -65,6 +72,7 @@ export const About = () => {
                   {t('about.experienceLabel')}
                 </p>
               </div>
+              {/* Foco principal */}
               <div>
                 <p className={`font-orbitron text-3xl font-bold ${
                   isDark ? 'text-cyber-neon' : 'text-cyber-blue-600'
@@ -79,7 +87,7 @@ export const About = () => {
               </div>
             </div>
 
-            {/* Specialties */}
+            {/* Especialidades como etiquetas */}
             <div className="space-y-3">
               <h3 className={`font-orbitron text-lg uppercase tracking-wider ${
                 isDark ? 'text-cyber-neon' : 'text-cyber-blue-600'

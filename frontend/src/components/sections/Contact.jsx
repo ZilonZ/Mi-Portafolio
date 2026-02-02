@@ -4,10 +4,13 @@ import { Card } from '../ui/Card';
 import { Button } from '../ui/Button';
 import { SectionTitle } from '../ui/SectionTitle';
 
+// Sección de contacto
+// Muestra información de contacto, redes sociales y llamada a acción
 export const Contact = () => {
   const { t } = useLanguage();
   const { isDark } = useTheme();
 
+  // Array de opciones de contacto con ícono, etiqueta, valor y enlace
   const contactLinks = [
     {
       icon: '✉️',
@@ -44,13 +47,14 @@ export const Contact = () => {
       isDark ? 'bg-cyber-darker' : 'bg-light-bg'
     }`}>
       <div className="max-w-7xl mx-auto px-6">
+        {/* Encabezado de sección */}
         <SectionTitle
           title={t('contact.title')}
           subtitle={t('contact.subtitle')}
         />
 
         <div className="max-w-3xl mx-auto">
-          {/* Contact Message */}
+          {/* Mensaje de contacto introductorio */}
           <Card className="text-center p-12 mb-12">
             <h3 className={`font-orbitron text-2xl uppercase tracking-wider mb-4 ${
               isDark ? 'text-cyber-bright' : 'text-cyber-blue-600'
@@ -64,13 +68,14 @@ export const Contact = () => {
             </p>
           </Card>
 
-          {/* Contact Options Grid */}
+          {/* Grid de opciones de contacto: 1 columna en mobile, 2 en md */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {contactLinks.map((link, idx) => (
               <Card
                 key={idx}
                 className="cursor-pointer transform hover:scale-105"
               >
+                {/* Enlace hacia plataforma de contacto */}
                 <a
                   href={link.href}
                   target="_blank"
@@ -78,7 +83,9 @@ export const Contact = () => {
                   className="block"
                 >
                   <div className="flex items-start gap-4 p-4">
+                    {/* Ícono de la plataforma */}
                     <div className="text-4xl">{link.icon}</div>
+                    {/* Información: etiqueta y valor */}
                     <div className="flex-1 min-w-0">
                       <p className={`font-orbitron text-sm uppercase tracking-wider ${
                         isDark ? 'text-cyber-bright' : 'text-cyber-blue-600'
@@ -91,6 +98,7 @@ export const Contact = () => {
                         {link.value}
                       </p>
                     </div>
+                    {/* Flecha indicadora de enlace */}
                     <svg className={`w-5 h-5 shrink-0 mt-1 ${
                       isDark ? 'text-cyber-neon' : 'text-cyber-blue-600'
                     }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,7 +110,7 @@ export const Contact = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* Botón principal de acción */}
           <div className="flex justify-center">
             <Button
               variant="primary"

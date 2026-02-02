@@ -1,3 +1,6 @@
+// Array de datos de experiencia laboral y educación
+// NOTA: Esta es una copia de respaldo. Los datos principales se encuentran en src/i18n/es.json
+// Los componentes usan la versión de i18n con la función t('experience.items')
 export const experienceData = [
   {
     year: '2025 - Presente',

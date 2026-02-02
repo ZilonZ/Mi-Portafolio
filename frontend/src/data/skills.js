@@ -1,3 +1,7 @@
+// Array de datos de habilidades técnicas organizadas por categoría
+// NOTA: Esta es una copia de respaldo con niveles de proficiency
+// Los componentes usan la versión de i18n con la función t('skills.frontend.skills')
+// Esta versión incluye niveles pero no se usa en la interfaz actual
 export const skillsData = [
   {
     category: 'Frontend',
