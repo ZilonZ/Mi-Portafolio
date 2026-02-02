@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cyber-blue { fill: #3B82F6; }
+      .cyber-dark { fill: #0B0F1A; }
+    </style>
+  </defs>
+  <!-- Background -->
+  <rect width="100" height="100" class="cyber-dark"/>
+  
+  <!-- Glow -->
+  <circle cx="50" cy="50" r="45" fill="none" stroke="#3B82F6" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Central shape - Letter C -->
+  <g class="cyber-blue">
+    <path d="M 30 30 Q 30 50 30 70 Q 30 75 35 75 L 45 75 Q 47 75 47 73 L 47 72 Q 47 70 45 70 L 37 70 Q 35 70 35 68 L 35 32 Q 35 30 37 30 L 45 30 Q 47 30 47 28 L 47 27 Q 47 25 45 25 L 35 25 Q 30 25 30 30 Z"/>
+    <!-- Decorative elements -->
+    <circle cx="60" cy="40" r="4"/>
+    <circle cx="65" cy="50" r="4"/>
+    <circle cx="60" cy="60" r="4"/>
+  </g>
+  
+  <!-- Corner accents -->
+  <line x1="10" y1="10" x2="20" y2="10" stroke="#3B82F6" stroke-width="2" opacity="0.6"/>
+  <line x1="10" y1="10" x2="10" y2="20" stroke="#3B82F6" stroke-width="2" opacity="0.6"/>
+  
+  <line x1="90" y1="10" x2="80" y2="10" stroke="#3B82F6" stroke-width="2" opacity="0.6"/>
+  <line x1="90" y1="10" x2="90" y2="20" stroke="#3B82F6" stroke-width="2" opacity="0.6"/>
+  
+  <line x1="10" y1="90" x2="20" y2="90" stroke="#3B82F6" stroke-width="2" opacity="0.6"/>
+  <line x1="10" y1="90" x2="10" y2="80" stroke="#3B82F6" stroke-width="2" opacity="0.6"/>
+  
+  <line x1="90" y1="90" x2="80" y2="90" stroke="#3B82F6" stroke-width="2" opacity="0.6"/>
+  <line x1="90" y1="90" x2="90" y2="80" stroke="#3B82F6" stroke-width="2" opacity="0.6"/>
+</svg>

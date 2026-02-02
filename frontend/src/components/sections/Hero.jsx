@@ -1,0 +1,140 @@
+import { useLanguage } from '../../hooks/useLanguage';
+import { useTheme } from '../../hooks/useTheme';
+import { Button } from '../ui/Button';
+
+export const Hero = () => {
+  const { t } = useLanguage();
+  const { isDark } = useTheme();
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <section id="hero" className={`min-h-screen flex items-center justify-center relative overflow-hidden pt-20 pb-20 ${
+      isDark ? 'bg-dark-bg' : 'bg-light-bg'
+    }`}>
+      {/* Background Grid Effect */}
+      {isDark && (
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage:
+              'linear-gradient(0deg, transparent 24%, rgba(125, 249, 255, .05) 25%, rgba(125, 249, 255, .05) 26%, transparent 27%, transparent 74%, rgba(125, 249, 255, .05) 75%, rgba(125, 249, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(125, 249, 255, .05) 25%, rgba(125, 249, 255, .05) 26%, transparent 27%, transparent 74%, rgba(125, 249, 255, .05) 75%, rgba(125, 249, 255, .05) 76%, transparent 77%, transparent)',
+            backgroundSize: '50px 50px',
+          }}
+        ></div>
+      )}
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Text */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+              <span className="font-orbitron text-sm uppercase tracking-wider text-primary">
+                {t('hero.status')}
+              </span>
+            </div>
+
+            <h1 className={`text-5xl lg:text-7xl font-orbitron font-bold leading-tight ${
+              isDark ? 'text-primary drop-shadow-[0_0_10px_rgba(125,249,255,0.4)]' : 'text-dark-bg'
+            }`}>
+              {t('hero.greeting')} <br />
+              <span className="text-primary">{t('hero.name')}</span>
+            </h1>
+
+            <p className={`text-2xl lg:text-3xl font-inter font-semibold ${
+              isDark ? 'text-primary' : 'text-dark-bg'
+            }`}>
+              {t('hero.title')}
+            </p>
+
+            <p className={`text-lg font-inter leading-relaxed max-w-xl ${
+              isDark ? 'text-[#E5E7EB]' : 'text-[#020617]'
+            }`}>
+              {t('hero.subtitle')}
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              <Button
+                onClick={() => scrollToSection('projects')}
+                variant="primary"
+                className="justify-center sm:justify-start"
+              >
+                <span>→</span>
+                {t('hero.cta_projects')}
+              </Button>
+              <Button
+                onClick={() => scrollToSection('contact')}
+                variant="secondary"
+                className="justify-center sm:justify-start"
+              >
+                {t('hero.cta_contact')}
+              </Button>
+            </div>
+
+            {/* Quick Stats */}
+            <div className={`flex gap-8 pt-8 border-t ${
+              isDark ? 'border-primary/20' : 'border-gray-200'
+            }`}>
+              <div>
+                <p className="font-orbitron text-2xl font-bold text-primary">5+</p>
+                <p className={`text-sm font-inter ${
+                  isDark ? 'text-[#94A3B8]' : 'text-[#334155]'
+                }`}>Años de experiencia</p>
+              </div>
+              <div>
+                <p className="font-orbitron text-2xl font-bold text-primary">20+</p>
+                <p className={`text-sm font-inter ${
+                  isDark ? 'text-[#94A3B8]' : 'text-[#334155]'
+                }`}>Proyectos completados</p>
+              </div>
+              <div>
+                <p className="font-orbitron text-2xl font-bold text-primary">100%</p>
+                <p className={`text-sm font-inter ${
+                  isDark ? 'text-[#94A3B8]' : 'text-[#334155]'
+                }`}>Dedicación</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Avatar/Illustration */}
+          <div className="flex items-center justify-center">
+            <div className="relative w-80 h-80">
+              {/* Glow Background */}
+              <div className={`absolute inset-0 rounded-lg blur-3xl opacity-30 ${
+                isDark 
+                  ? 'bg-primary' 
+                  : 'bg-primary/30'
+              }`}></div>
+
+              {/* Avatar Box */}
+              <div className={`absolute inset-0 border-2 rounded-lg flex items-center justify-center overflow-hidden ${
+                isDark
+                  ? 'bg-dark-card border-primary/50'
+                  : 'bg-light-card border-primary/30'
+              }`}>
+                {/* Profile Image */}
+                <img 
+                  src="/src/assets/img/Cris.JPG" 
+                  alt="Cristian Morales" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Decorative Elements */}
+              <div className={`absolute -top-2 -right-2 w-8 h-8 border-2 rounded ${
+                isDark ? 'border-primary' : 'border-primary/60'
+              }`}></div>
+              <div className={`absolute -bottom-2 -left-2 w-8 h-8 border-2 rounded ${
+                isDark ? 'border-primary' : 'border-primary/60'
+              }`}></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

@@ -1,0 +1,115 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Cristian Morales",
+    "title": "Full Stack Web Developer | Frontend & UX Specialist",
+    "subtitle": "I transform ideas into clear, intuitive and engaging digital experiences.",
+    "cta_projects": "View Projects",
+    "cta_contact": "Get in Touch",
+    "status": "Available for projects"
+  },
+  "about": {
+    "title": "ABOUT ME",
+    "subtitle": "My professional profile",
+    "description": "I'm Cristian Morales, a Full Stack web developer and Systems Engineering student. I specialize in frontend and user experience design, with strong expertise in React and modern interface design. I transform ideas into clear, intuitive and attractive digital products. As a freelancer and co-founder of KCJ Dev Studio, I've worked with real clients on professional web solutions.",
+    "levelLabel": "Level",
+    "levelValue": "Mid-Senior",
+    "experienceLabel": "Experience",
+    "experienceValue": "2+ years",
+    "focusLabel": "Specialty",
+    "focusValue": "Frontend & UX"
+  },
+  "skills": {
+    "title": "TECH STACK",
+    "subtitle": "Technologies and skills",
+    "frontend": {
+      "category": "Frontend",
+      "skills": ["React", "Next.js", "React Native", "JavaScript", "TypeScript", "Tailwind CSS"]
+    },
+    "backend": {
+      "category": "Backend",
+      "skills": ["Node.js", "PHP", "Python", "MySQL"]
+    },
+    "tools": {
+      "category": "Tools",
+      "skills": ["Git/GitHub", "VS Code", "Android Studio", "Responsive Design", "UI/UX Design"]
+    }
+  },
+  "projects": {
+    "title": "PROJECTS",
+    "subtitle": "My featured work",
+    "projects": [
+      {
+        "id": 1,
+        "name": "KCJ Dev Studio",
+        "role": "Co-founder & Frontend Developer",
+        "description": "Official corporate website for KCJ Dev Studio. Showcasing services, approach and studio methodology with modern, conversion-oriented interface.",
+        "technologies": ["React", "Tailwind CSS", "JavaScript", "Responsive Design"],
+        "status": "completed",
+        "link": "https://kcjdevstudio.com/"
+      },
+      {
+        "id": 2,
+        "name": "GEMA",
+        "role": "Frontend Developer (80%) | Backend Support (10%)",
+        "description": "Web platform for a real client, used by Servimacons del Meta. Focus on UX/UI design and professional user experience.",
+        "technologies": ["React", "TypeScript", "Next.js", "Tailwind", "MySQL"],
+        "status": "completed",
+        "link": "https://www.gema-co.site/"
+      }
+    ],
+    "viewProject": "View Project",
+    "status": {
+      "completed": "Completed",
+      "inProduction": "In Production"
+    }
+  },
+  "experience": {
+    "title": "EXPERIENCE",
+    "subtitle": "My professional journey",
+    "items": [
+      {
+        "year": "2024 - Present",
+        "title": "Freelancer | Full Stack Web Developer",
+        "company": "Independent",
+        "description": "Development of web solutions for real clients and academic projects, focused on frontend, user experience and modern design."
+      },
+      {
+        "year": "2023 - Present",
+        "title": "Co-founder & Frontend Developer",
+        "company": "KCJ Dev Studio",
+        "description": "Web development studio focused on custom digital solutions. Design, layout and development of modern interfaces."
+      },
+      {
+        "year": "2020 - Present",
+        "title": "Systems Engineering Student",
+        "company": "Education",
+        "description": "Training in web development, information systems and user experience. Academic projects focused on real solutions."
+      }
+    ]
+  },
+  "contact": {
+    "title": "CONTACT",
+    "subtitle": "Ready for the next mission?",
+    "description": "Let's talk and build something amazing together. I'm available for projects, collaborations and professional opportunities.",
+    "email": "zilonoy19@gmail.com",
+    "socials": {
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "cta": "Send Message"
+  },
+  "footer": {
+    "credits": "Designed and developed with ❤️ by Cristian Morales",
+    "year": "2026"
+  }
+}
