@@ -1,6 +1,5 @@
 import { useLanguage } from '../../hooks/useLanguage';
 import { useTheme } from '../../hooks/useTheme';
-import { projectsData } from '../../data/projects';
 import { Card } from '../ui/Card';
 import { Button } from '../ui/Button';
 import { SectionTitle } from '../ui/SectionTitle';
@@ -8,6 +7,8 @@ import { SectionTitle } from '../ui/SectionTitle';
 export const Projects = () => {
   const { t } = useLanguage();
   const { isDark } = useTheme();
+
+  const projectsData = t('projects.projects') || [];
 
   return (
     <section id="projects" className={`py-20 relative transition-colors duration-300 ${
@@ -87,9 +88,15 @@ export const Projects = () => {
                       ? t('projects.status.completed')
                       : t('projects.status.inProduction')}
                   </span>
-                  <Button variant="ghost" className="px-4 py-2 text-sm">
-                    {t('projects.viewProject')} →
-                  </Button>
+                  <a 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="ghost" className="px-4 py-2 text-sm">
+                      {t('projects.viewProject')} →
+                    </Button>
+                  </a>
                 </div>
               </div>
             </Card>

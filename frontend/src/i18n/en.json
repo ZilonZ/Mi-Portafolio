@@ -53,7 +53,8 @@
         "description": "Official corporate website for KCJ Dev Studio. Showcasing services, approach and studio methodology with modern, conversion-oriented interface.",
         "technologies": ["React", "Tailwind CSS", "JavaScript", "Responsive Design"],
         "status": "completed",
-        "link": "https://kcjdevstudio.com/"
+        "link": "https://kcjdevstudio.com/",
+        "image": "/src/assets/img/Ejemplo_KCJ.png"
       },
       {
         "id": 2,
@@ -62,7 +63,8 @@
         "description": "Web platform for a real client, used by Servimacons del Meta. Focus on UX/UI design and professional user experience.",
         "technologies": ["React", "TypeScript", "Next.js", "Tailwind", "MySQL"],
         "status": "completed",
-        "link": "https://www.gema-co.site/"
+        "link": "https://www.gema-co.site/",
+        "image": "/src/assets/img/Ejemplo_gema.png"
       }
     ],
     "viewProject": "View Project",
@@ -76,19 +78,19 @@
     "subtitle": "My professional journey",
     "items": [
       {
-        "year": "2024 - Present",
+        "year": "2025 - Present",
         "title": "Freelancer | Full Stack Web Developer",
         "company": "Independent",
         "description": "Development of web solutions for real clients and academic projects, focused on frontend, user experience and modern design."
       },
       {
-        "year": "2023 - Present",
+        "year": "2025 - Present",
         "title": "Co-founder & Frontend Developer",
         "company": "KCJ Dev Studio",
         "description": "Web development studio focused on custom digital solutions. Design, layout and development of modern interfaces."
       },
       {
-        "year": "2020 - Present",
+        "year": "2022 - Present",
         "title": "Systems Engineering Student",
         "company": "Education",
         "description": "Training in web development, information systems and user experience. Academic projects focused on real solutions."

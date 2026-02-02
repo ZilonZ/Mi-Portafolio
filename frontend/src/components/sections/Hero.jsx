@@ -131,6 +131,11 @@ export const Hero = () => {
               <div className={`absolute -bottom-2 -left-2 w-8 h-8 border-2 rounded ${
                 isDark ? 'border-primary' : 'border-primary/60'
               }`}></div>
+
+              {/* Username */}
+              <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 text-center">
+                <p className="font-orbitron text-xl font-bold text-primary">ZilonZ</p>
+              </div>
             </div>
           </div>
         </div>

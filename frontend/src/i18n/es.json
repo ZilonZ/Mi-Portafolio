@@ -53,7 +53,8 @@
         "description": "Sitio web corporativo oficial de KCJ Dev Studio. Presenta servicios, enfoque y metodología del estudio con interfaz moderna y orientada a conversión.",
         "technologies": ["React", "Tailwind CSS", "JavaScript", "Responsive Design"],
         "status": "completed",
-        "link": "https://kcjdevstudio.com/"
+        "link": "https://kcjdevstudio.com/",
+        "image": "/src/assets/img/Ejemplo_KCJ.png"
       },
       {
         "id": 2,
@@ -62,7 +63,8 @@
         "description": "Plataforma web para cliente real, utilizada por Servimacons del Meta. Enfoque en diseño UX/UI y experiencia de usuario profesional.",
         "technologies": ["React", "TypeScript", "Next.js", "Tailwind", "MySQL"],
         "status": "completed",
-        "link": "https://www.gema-co.site/"
+        "link": "https://www.gema-co.site/",
+        "image": "/src/assets/img/Ejemplo_gema.png"
       }
     ],
     "viewProject": "Ver Proyecto",
@@ -76,19 +78,19 @@
     "subtitle": "Mi trayectoria profesional",
     "items": [
       {
-        "year": "2024 - Presente",
+        "year": "2025 - Presente",
         "title": "Freelancer | Desarrollador Web Full Stack",
         "company": "Independiente",
         "description": "Desarrollo de soluciones web para clientes reales y proyectos académicos, enfocado en frontend, experiencia de usuario y diseño moderno."
       },
       {
-        "year": "2023 - Presente",
+        "year": "2025 - Presente",
         "title": "Cofundador & Desarrollador Frontend",
         "company": "KCJ Dev Studio",
         "description": "Estudio de desarrollo web enfocado en soluciones digitales a medida. Diseño, maquetación y desarrollo de interfaces modernas."
       },
       {
-        "year": "2020 - Presente",
+        "year": "2022 - Presente",
         "title": "Estudiante de Ingeniería de Sistemas",
         "company": "Educación",
         "description": "Formación en desarrollo web, sistemas de información y experiencia de usuario. Proyectos académicos enfocados en soluciones reales."

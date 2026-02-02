@@ -1,11 +1,12 @@
 import { useLanguage } from '../../hooks/useLanguage';
 import { useTheme } from '../../hooks/useTheme';
-import { experienceData } from '../../data/experience';
 import { SectionTitle } from '../ui/SectionTitle';
 
 export const Experience = () => {
   const { t } = useLanguage();
   const { isDark } = useTheme();
+
+  const experienceData = t('experience.items') || [];
 
   return (
     <section id="experience" className={`py-20 relative transition-colors duration-300 ${

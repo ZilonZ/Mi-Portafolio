@@ -1,12 +1,26 @@
 import { useLanguage } from '../../hooks/useLanguage';
 import { useTheme } from '../../hooks/useTheme';
-import { skillsData } from '../../data/skills';
 import { Card } from '../ui/Card';
 import { SectionTitle } from '../ui/SectionTitle';
 
 export const Skills = () => {
   const { t } = useLanguage();
   const { isDark } = useTheme();
+
+  const skillsData = [
+    {
+      category: t('skills.frontend.category'),
+      skills: t('skills.frontend.skills') || []
+    },
+    {
+      category: t('skills.backend.category'),
+      skills: t('skills.backend.skills') || []
+    },
+    {
+      category: t('skills.tools.category'),
+      skills: t('skills.tools.skills') || []
+    }
+  ];
 
   return (
     <section id="skills" className={`py-20 relative transition-colors duration-300 ${
@@ -27,32 +41,18 @@ export const Skills = () => {
                 {category.category}
               </h3>
 
-              <div className="space-y-5">
+              <div className="space-y-3">
                 {category.skills.map((skill, skillIdx) => (
-                  <div key={skillIdx}>
-                    <div className={`flex justify-between items-center mb-2 text-sm font-inter ${
+                  <div key={skillIdx} className={`p-3 rounded-lg transition-colors duration-300 ${
+                    isDark
+                      ? 'bg-cyber-black/30 border border-cyber-blue-600/20 hover:border-cyber-blue-600/50'
+                      : 'bg-cyber-blue-50 border border-cyber-blue-200 hover:border-cyber-blue-400'
+                  }`}>
+                    <span className={`text-sm font-inter ${
                       isDark ? 'text-cyber-light' : 'text-light-text'
                     }`}>
-                      <span>{skill.name}</span>
-                      <span className={`font-orbitron text-xs ${
-                        isDark ? 'text-cyber-bright' : 'text-cyber-blue-600'
-                      }`}>{skill.level}%</span>
-                    </div>
-                    {/* Skill Bar */}
-                    <div className={`w-full h-2 rounded-full overflow-hidden border transition-colors duration-300 ${
-                      isDark
-                        ? 'bg-cyber-black/50 border-cyber-blue-600/30'
-                        : 'bg-light-border border-cyber-blue-300'
-                    }`}>
-                      <div
-                        className={`h-full rounded-full shadow-glow-sm transition-all duration-500 ${
-                          isDark
-                            ? 'bg-linear-to-r from-cyber-blue-600 to-cyber-neon'
-                            : 'bg-linear-to-r from-cyber-blue-500 to-cyber-blue-400'
-                        }`}
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
+                      {skill}
+                    </span>
                   </div>
                 ))}
               </div>
