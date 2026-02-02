@@ -7,7 +7,7 @@ export const projectsData = [
     technologies: ['React', 'Tailwind CSS', 'JavaScript', 'Responsive Design'],
     status: 'completed',
     link: 'https://kcjdevstudio.com/',
-    image: 'https://via.placeholder.com/600x400?text=KCJ+Dev+Studio',
+    image: '/src/assets/img/Ejemplo_KCJ.png',
   },
   {
     id: 2,
@@ -17,6 +17,6 @@ export const projectsData = [
     technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'MySQL'],
     status: 'completed',
     link: 'https://www.gema-co.site/',
-    image: 'https://via.placeholder.com/600x400?text=GEMA',
+    image: '/src/assets/img/Ejemplo_gema.png',
   },
 ];

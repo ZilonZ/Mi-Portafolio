@@ -80,13 +80,13 @@ export const Hero = () => {
               isDark ? 'border-primary/20' : 'border-gray-200'
             }`}>
               <div>
-                <p className="font-orbitron text-2xl font-bold text-primary">5+</p>
+                <p className="font-orbitron text-2xl font-bold text-primary">1+</p>
                 <p className={`text-sm font-inter ${
                   isDark ? 'text-[#94A3B8]' : 'text-[#334155]'
                 }`}>Años de experiencia</p>
               </div>
               <div>
-                <p className="font-orbitron text-2xl font-bold text-primary">20+</p>
+                <p className="font-orbitron text-2xl font-bold text-primary">3+</p>
                 <p className={`text-sm font-inter ${
                   isDark ? 'text-[#94A3B8]' : 'text-[#334155]'
                 }`}>Proyectos completados</p>
@@ -102,7 +102,7 @@ export const Hero = () => {
 
           {/* Right Column - Avatar/Illustration */}
           <div className="flex items-center justify-center">
-            <div className="relative w-80 h-80">
+            <div className="relative w-72 h-96 animate-float">
               {/* Glow Background */}
               <div className={`absolute inset-0 rounded-lg blur-3xl opacity-30 ${
                 isDark 
@@ -118,7 +118,7 @@ export const Hero = () => {
               }`}>
                 {/* Profile Image */}
                 <img 
-                  src="/src/assets/img/Cris.JPG" 
+                  src="/src/assets/img/Avatar ZilonZ.png" 
                   alt="Cristian Morales" 
                   className="w-full h-full object-cover"
                 />
